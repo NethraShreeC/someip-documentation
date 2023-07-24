@@ -435,30 +435,75 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Documentation of Someip</h1>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_vsomeip_overview">vSomeIP Overview:</h2>
+<h2 id="_documentation_of_someip">Documentation of Someip</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_index"><strong>Index</strong></h3>
+<!-- toc disabled -->
+<div class="paragraph">
+<p><a href="#vsomeIP-Overview">1.vsomeIP Overview</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Prerequisites">2. Prerequisites</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Docker-Installation">2.1.Docker Installation</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Kubernetes-Installation">2.2.Kubernetes Installation</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Installation-and-Upgrade">3. Installation and Upgrade</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Configuration">4. Configuration</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#TCP">4.1.TCP</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#UDP">4.2.UDP</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Shared-Memory">4.3. Shared Memory</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Communication-styles">5. Communication styles</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Applications-running-in-same-containers">5.1 Applications running in same containers</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Applications-running-in-different-containers-in-a-same-Pod">5.2 Applications running in different containers, in a same Pod</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Applications-running-in-different-Pod-in-a-same-Node">5.3 Applications running in different Pod, in a same Node</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#Applications-running-in-different-Nodes">5.4 Applications running in different Nodes</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#CI-CD-process">6. CI/CD process</a></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div id="vsomeIP-Overview" class="paragraph">
+<p><strong>1.vSomeIP Overview:</strong></p>
+</div>
 <div class="paragraph">
 <p>vSomeIP (Virtualized Scalable Service-Oriented MiddlewarE over IP) is an implementation of the SOME/IP protocol, which is a communication protocol used in automotive and other embedded systems for service-oriented communication over IP networks. vSomeIP enables inter-process communication between software components in a distributed system. It provides features like message serialization, service discovery, and end-to-end (E2E) protection.</p>
 </div>
+<div id="Prerequisites" class="paragraph">
+<p><strong>2.Prerequisites:</strong></p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_prerequisites">Prerequisites:</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>Make sure you have installed docker and Kubernetes on the local system.</p>
 </div>
+<div id="Docker-Installation" class="paragraph">
+<p><strong>2.1 Docker Installation:</strong></p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_installation_and_upgrade">Installation and Upgrade:</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_1_docker_installation">1.Docker Installation:</h3>
 <div class="paragraph">
 <p>Docker provides installation guides for various operating systems on their official website. You can find the appropriate installation guide for your OS here</p>
 </div>
@@ -468,9 +513,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Follow the instructions provided in the Docker installation guide for your specific operating system, and it will walk you through the installation process.</p>
 </div>
+<div id="Kubernetes-Installation" class="paragraph">
+<p><strong>2.2 Kubernetes Installation:</strong></p>
 </div>
-<div class="sect2">
-<h3 id="_2_kubernetes_installation">2.Kubernetes Installation:</h3>
 <div class="paragraph">
 <p>Kubernetes provides installation guides for various operating systems on their official website. You can find the appropriate installation guide for your OS here</p>
 </div>
@@ -480,9 +525,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Follow the instructions provided in the Kubernetes installation guide for your specific operating system, and it will walk you through the installation process.</p>
 </div>
+<div style="page-break-after: always;"></div>
+<div id="Installation-and-Upgrade" class="paragraph">
+<p><strong>3.Installation and Upgrade:</strong></p>
 </div>
-<div class="sect2">
-<h3 id="_if_you_want_to_use_docker_to_build_and_push_the_vsomeip_docker_image_follow_these_steps">If you want to use Docker to build and push the vSomeIP docker image, follow these steps:</h3>
 <div class="paragraph">
 <p>Step 1: Pull the image from the Azure Container Registry (ACR)
 To pull the Docker image from the ACR, you use the <strong>docker pull</strong> command followed by the image name and tag/version:</p>
@@ -538,204 +584,238 @@ spec:
 pod/vsomeip-subscriber created</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
+<div id="Configuration" class="paragraph">
+<p><strong>4.Configuration:</strong></p>
 </div>
+<div id="TCP" class="paragraph">
+<p><strong>4.1 TCP</strong></p>
 </div>
+<div id="UDP" class="paragraph">
+<p><strong>4.2 UDP</strong></p>
 </div>
-<div class="sect1">
-<h2 id="_configuration">Configuration:</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>TCP</p>
+<div id="Shared-Memory" class="paragraph">
+<p><strong>4.3 Shared Memory</strong></p>
 </div>
-<div class="paragraph">
-<p>UPD</p>
+<div style="page-break-after: always;"></div>
+<div id="Communication-styles" class="paragraph">
+<p><strong>5.Communication styles:</strong></p>
 </div>
-<div class="paragraph">
-<p>Shared Memory</p>
+<div id="Applications-running-in-same-containers" class="paragraph">
+<p><strong>5.1 Applications running in same containers :</strong></p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_communication_styles">Communication styles:</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_deployment_scenario_1">Deployment Scenario 1:</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/scenario1.png" alt="scenario1">
 </div>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p><strong>Container</strong>: Represents a single container that includes both the "Notifier" and "Subscriber" applications running together.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Applications</strong>: The container contains two applications: the <strong>"Notifier"</strong> application and the <strong>"Subscriber"</strong> application.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Notifier</strong>: Represents the "Notifier" application that generates events or notifications.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Subscriber</strong>: Represents the "Subscriber" application that listens for and processes the events or notifications sent by the "Notifier."</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>In this scenario, both the "Notifier" and "Subscriber" applications communicate smoothly and exchange information through the SOME/IP protocol inside the container, without needing any external networks or devices</p>
+</li>
+</ul>
 </div>
+<div style="page-break-after: always;"></div>
+<div id="Applications-running-in-different-containers-in-a-same-Pod" class="paragraph">
+<p><strong>5.2 Applications running in different containers, in a same Pod:</strong></p>
 </div>
-<div class="sect2">
-<h3 id="_deployment_scenario_2">Deployment Scenario 2:</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/scenario2.png" alt="scenario2">
 </div>
 </div>
-<div class="paragraph">
+<div class="imageblock">
+<div class="content">
+<img src="images/someip-shm-scenario2.1.png" alt="someip shm scenario2.1" width="500" height="500">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/someip-shm-scenario2.2.png" alt="someip shm scenario2.2" width="500" height="500">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/someip-shm-scenario2.3.png" alt="someip shm scenario2.3" width="500" height="500">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
 <p>In this scenario, The pod contains two containers: "Container 1" (Notify) and "Container 2" (Subscriber).</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The <strong>"Notifier"</strong> container (Container 1) is responsible for publishing events or notifications using the SOME/IP protocol. It encodes the event data into SOME/IP messages and sends them out.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>On the other hand, the <strong>"Subscriber"</strong> container (Container 2) is responsible for subscribing to these events through the SAME/IP protocol. It receives the SOME/IP messages sent by the "Notifier," decodes them to extract the event data, and processes the events accordingly.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Both the <strong>"Notifier"</strong> and <strong>"Subscriber"</strong> containers are co-located within the same pod, which means they share the same network namespace. This allows them to effectively communicate with each other using the "localhost" network interface. The shared network namespace enables seamless and efficient communication between the containers, facilitating the exchange of SOME/IP messages for the publish-subscribe pattern to work effectively within the Kubernetes pod.</p>
+</li>
+</ul>
 </div>
+<div style="page-break-after: always;"></div>
+<div id="Applications-running-in-different-Pod-in-a-same-Node" class="paragraph">
+<p><strong>5.3 Applications running in different Pod, in a same Node :</strong></p>
 </div>
-<div class="sect2">
-<h3 id="_deployment_scenario_3">Deployment Scenario 3:</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/scenario3.png" alt="scenario3">
 </div>
 </div>
-<div class="paragraph">
+<div class="imageblock">
+<div class="content">
+<img src="images/someip-udp-scenario3.1.png" alt="someip udp scenario3.1" width="500" height="500">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/someip-udp-scenario3.2.png" alt="someip udp scenario3.2" width="500" height="500">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/someip-udp-scenario3.3.png" alt="someip udp scenario3.3" width="500" height="500">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
 <p>In this scenario, We have two pods running on the same node: one pod acts as the "Notifier" and the other as the "Subscriber," both communicating via the SOME/IP protocol     Kubernetes Node: Represents a physical or virtual machine in the Kubernetes cluster where the two pods are scheduled to run.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Pod 1 (Notify)</strong>: The first pod contains the "Notifier" container responsible for publishing events or notifications.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Notifier Container</strong>: The "Notifier" container runs within Pod 1 and communicates using the SOME/IP protocol. It generates events and formats them into SOME/IP messages for transmission.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Pod 2 (Subscribe)</strong>: The second pod contains the "Subscriber" container responsible for subscribing to and processing events.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Subscriber Container</strong>: The "Subscriber" container runs within Pod 2 and communicates using the SOME/IP protocol. It listens for incoming SOME/IP messages from the "Notifier" container.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Communication via SOME/IP</strong>: The "Notifier" container in Pod 1 sends SOME/IP messages containing events to the "Subscriber" container in Pod 2 over the node&#8217;s internal network.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Node</strong>: Since both pods are scheduled on the same node, they can communicate directly using the node&#8217;s internal network without involving external network hops. This allows for low-latency communication between the "Notifier" and "Subscriber" containers.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The communication flow between the "Notifier" and "Subscriber" containers running in different pods on the same Kubernetes node. The SOME/IP protocol facilitates efficient communication between the two containers for event notification and processing.</p>
+</li>
+</ul>
 </div>
+<div style="page-break-after: always;"></div>
+<div id="Applications-running-in-different-Nodes" class="paragraph">
+<p><strong>5.4 Applications running in different Nodes:</strong></p>
 </div>
-<div class="sect2">
-<h3 id="_deployment_scenario_4">Deployment Scenario 4:</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/scenario4.png" alt="scenario4">
 </div>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>In this scenario, the "Notifier" and "Subscriber" applications are running in different pods, and these pods are scheduled on different nodes within a Kubernetes cluster. They communicate with each other via the SOME/IP protocol.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Kubernetes Cluster</strong>: Represents the entire Kubernetes environment, consisting of multiple nodes that can be physical or virtual machines.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Node 1 (Pod 1)</strong>: Represents one of the nodes within the Kubernetes cluster. This node hosts "Pod 1."</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Pod 1</strong>: Contains the "Notifier" application, which generates events and communicates via the SOME/IP protocol.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Notifier</strong>: The "Notifier" application runs inside "Pod 1" on "Node 1." It generates events and sends SOME/IP messages.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Node 2 (Pod 2)</strong>: Represents another node within the Kubernetes cluster. This node hosts "Pod 2."</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Pod 2</strong>: Contains the "Subscriber" application, which listens for events and communicates via the SOME/IP protocol.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Subscriber</strong>: The "Subscriber" application runs inside "Pod 2" on "Node 2." It receives SOME/IP messages and processes events accordingly.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Communication via SOME/IP</strong>: The "Notifier" application sends SOME/IP messages with events to the "Subscriber" application. These messages travel over the network connecting "Node 1" and "Node 2" within the Kubernetes cluster.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p><strong>Different Nodes and Pods</strong>: Since "Notifier" and "Subscriber" are running in different pods on different nodes, they communicate through the Kubernetes network and the underlying network infrastructure that connects the nodes in the cluster. The SOME/IP protocol enables them to exchange data effectively despite being deployed on separate nodes.</p>
+</li>
+</ul>
 </div>
+<div style="page-break-after: always;"></div>
+<div id="CI-CD-process" class="paragraph">
+<p><strong>6.CI/CD process</strong></p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_cicd_process">CI/CD process</h2>
-<div class="sectionbody">
 <div class="imageblock">
 <div class="content">
 <img src="images/deploymentdrawio.png" alt="deploymentdrawio" width="1000" height="500">
 </div>
 </div>
-<div class="paragraph">
-<p>The customer repository has a structure with three folders: main, Test-cases, and Test-data. The main folder contains two files: parameters.yaml and payload.json. The parameters.yaml file is used by the customer to provide information such as image name, repository name, and deployment tag. Additionally, the customer can choose to send the main folder, test-cases folder, and test-data folder to Azure Blob Storage.</p>
-</div>
-<div class="paragraph">
-<p>In Azure Blob Storage, there are three containers named main, test-cases, and test-data. The customer&#8217;s pipeline will be responsible for fetching the data from the customer repository and sending it to the respective containers in Azure Blob Storage.</p>
-</div>
-<div class="paragraph">
-<p>Now, let&#8217;s understand the process of the customer pipeline and how it triggers the scuti-pipeline:</p>
-</div>
-<div class="paragraph">
-<p>Customer Pipeline Steps:</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha">
+<div class="ulist">
+<ul>
 <li>
-<p>Read parameters.yaml: The customer pipeline will read the parameters.yaml file to extract information like image name, repository name, and deployment tag. This information will be used for further processing.</p>
+<p><strong>Customer Pipeline Steps:</strong></p>
 </li>
 <li>
-<p>Upload Folders to Azure Blob Storage: Based on the customer&#8217;s choice in parameters.yaml, the customer pipeline will upload the selected folders (main, test-cases, and test-data) to their corresponding containers (main, test-cases, and test-data) in Azure Blob Storage.</p>
+<p>Read parameters.yaml: The customer pipeline reads the parameters.yaml file from the main folder in the repository. This file contains essential information provided by the customer, such as the image name, repository name, and deployment tag.</p>
 </li>
-</ol>
+<li>
+<p>Upload Folders to Azure Blob Storage: Based on the customer&#8217;s choice specified in parameters.yaml, the customer pipeline uploads the selected folders (main, test-cases, and test-data) to their respective containers (main, test-cases, and test-data) in Azure Blob Storage.</p>
+</li>
+<li>
+<p><strong>Triggering the Scuti-Pipeline:</strong></p>
+</li>
+<li>
+<p>Scuti Pipeline Execution: After being triggered by the customer pipeline, the Scuti-Pipeline starts its execution.</p>
+</li>
+<li>
+<p><strong>Scuti Pipeline Steps:</strong></p>
+</li>
+<li>
+<p>Read parameters.yaml from Azure Blob Storage: The Scuti pipeline accesses Azure Blob Storage and retrieves the parameters.yaml file from the appropriate container (main).</p>
+</li>
+<li>
+<p>Extract Image Name, Deployment Tag, and Repository Name: The Scuti pipeline parses the content of parameters.yaml to extract the necessary information, such as the image name, deployment tag, and repository name. This extracted data will be used for the next steps.</p>
+</li>
+<li>
+<p>Build the Docker Image: Using the extracted image name, deployment tag, and repository name, the Scuti pipeline initiates the building of the Docker image. It references the payload.json file and any other required dependencies to create a custom Docker image.</p>
+</li>
+<li>
+<p>Push the Image to Azure Container Registry (ACR): Once the Docker image is built, the Scuti pipeline pushes the image to the specified Azure Container Registry. This step makes the custom Docker image available for deployment and use in various environments.</p>
+</li>
+<li>
+<p>Pipeline Template Repository: The pipeline_template repository contains the configuration and scripts required for the Scuti pipeline. It acts as a blueprint for setting up and running the pipeline effectively.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Triggering the Scuti-Pipeline:</p>
-</div>
-<div class="paragraph">
-<p>Scuti Pipeline Execution:</p>
-</div>
-<div class="paragraph">
-<p>The Scuti-Pipeline will start execution after being triggered by the customer pipeline. It will retrieve the data from the Azure Blob Storage containers (main, test-cases, and test-data) and perform the necessary processing or analysis as specified in the pipeline.</p>
-</div>
-<div class="paragraph">
-<p>the Scuti pipeline is responsible for reading the parameters.yaml file from the Azure Blob Storage, extracting the image name, deployment tag, and repository name from it. After that, it uses this information to build an image and push it to an Azure Container Registry (ACR). Here&#8217;s the process broken down step by step:</p>
-</div>
-<div class="paragraph">
-<p>Read parameters.yaml from Azure Blob Storage: The Scuti pipeline will access the Azure Blob Storage and retrieve the parameters.yaml file from the appropriate container. This file contains the necessary information such as image name, deployment tag, and repository name.</p>
-</div>
-<div class="paragraph">
-<p>Extract Image Name, Deployment Tag, and Repository Name: The Scuti pipeline will parse the content of parameters.yaml to extract the required values for image name, deployment tag, and repository name. This information will be used to define the container image to be built.</p>
-</div>
-<div class="paragraph">
-<p>Build the Docker Image: Using the extracted values (image name, deployment tag, and repository name), the Scuti pipeline will initiate the building of the Docker image. It will use a Dockerfile to define the image&#8217;s specifications and dependencies.</p>
-</div>
-<div class="paragraph">
-<p>Push the Image to Azure Container Registry (ACR): Once the Docker image is built, the Scuti pipeline will push the image to the specified Azure Container Registry. This makes the image available for deployment and use in various environments.</p>
-</div>
-<div class="paragraph">
-<p>Pipeline Template Repository: The pipeline_template repository where the Scuti pipeline&#8217;s configuration or template is stored. It contain the scripts, configuration files, and steps required to build and push the Docker image to ACR.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-07-20 09:44:37 +0530
+Last updated 2023-07-22 12:56:49 +0530
 </div>
 </div>
 </body>
